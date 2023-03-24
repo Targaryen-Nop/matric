@@ -1,0 +1,220 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+<title>Home</title>
+{% endblock %}
+{% block contian %}
+{% load static %}
+<div class="row my-3">
+  <div class="col-2">
+    <div class="card mb-2" style="width: 100%;">
+      <div class="card-body text-center">
+        <i class="fa fa-tachometer fa-5x" aria-hidden="true"></i>
+        <h5 class="card-title">Dashboard</h5>
+      </div>
+    </div>
+    <div class="card my-2" style="width: 100%;">
+      <div class="card-body text-center">
+        <i class="fa fa-globe fa-5x" aria-hidden="true"></i>
+        <h5 class="card-title">Domain</h5>
+      </div>
+    </div>
+    <div class="card my-2" style="width: 100%;">
+      <div class="card-body text-center">
+        <i class="fa fa-cloud fa-5x" aria-hidden="true"></i>
+        <h5 class="card-title">Domain</h5>
+      </div>
+    </div>
+    <div class="card my-2" style="width: 100%;">
+      <div class="card-body text-center">
+        <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
+        <h5 class="card-title">Support</h5>
+      </div>
+    </div>
+  </div>
+  <div class="col-7">
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Packages</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Packages Please select cpu performance.</h6>
+        <hr>
+        <div class="row">
+          <div class="col-3">
+            CPU Cores
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <option value="all" selected>ALL</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">4</option>
+              <option value="3">8</option>
+              <option value="3">12</option>
+              <option value="3">16</option>
+              <option value="3">24</option>
+            </select>
+          </div>
+          <div class="col-3">
+            Rams (GB)
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <option value="all" selected>ALL</option>
+              <option value="2">2</option>
+              <option value="4">4</option>
+              <option value="8">8</option>
+              <option value="8">16</option>
+              <option value="8">24</option>
+              <option value="8">32</option>
+              <option value="8">48</option>
+              <option value="8">64</option>
+              <option value="8">96</option>
+              <option value="8">128</option>
+              <option value="8">192</option>
+              <option value="8">252</option>
+              <option value="8">256</option>
+            </select>
+          </div>
+          <div class="col-6">
+            CPU Performance More Details
+            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+              <option selected>ALL</option>
+              <option value="1">General computing</option>
+              <option value="2">
+                AI Accelerated
+              </option>
+              <option value="3">Disk Intensive</option>
+              <option value="3">Large Memory</option>
+              <option value="3">GPU Accelerated</option>
+              <option value="3">Ultra High I/O</option>
+              <option value="3">Memory Optimized</option>
+              <option value="3">General computing Basi</option>
+              <option value="3"> General computing Plus</option>
+              <option value="3">High Performance computing</option>
+            </select>
+          </div>
+
+        </div>
+        <hr>
+        <h5 class="card-title">Operating System</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Please select operating system and version. </h6>
+        <img src ="{% static 'images/os1.png' %}"/>
+        <img src ="{% static 'images/os2.png' %}"/>
+        <img src ="{% static 'images/os3.png' %}"/>
+        <img src ="{% static 'images/os4.png' %}"/>
+        <hr>
+        <h5 class="card-title">Auto Install Application</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Please select feature application and version. </h6>
+        <hr>
+        <h5 class="card-title">System Disk</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Selects the specified system disk </h6>
+       <div class="row">
+        <div class="col-3">
+          <input type="number" class="form-control" min="0" max="5" step="1"> 
+        </div>
+        GB (1-1024 GB)
+       </div>
+        <hr>
+        <h5 class="card-title">Additional disk</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Add Additional disk. </h6>
+        <div class="" id="disk-area">
+          <div class="row">
+            <div class="col-2">
+              <p>Data Disk</p>
+            </div>
+            <div class="col-3">
+              <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <option value="all" selected>ALL</option>
+                <option value="1">High I/O</option>
+                <option value="2">2</option>
+                <option value="3">4</option>
+                <option value="3">8</option>
+                <option value="3">12</option>
+                <option value="3">16</option>
+                <option value="3">24</option>
+              </select>
+            </div>
+            <div class="col-4">
+              <div class="input-group">
+                <input type="number" class="form-control" min="0" max="5" step="1">
+                <span> GB(1-1024 GB) </span>
+                <span> Delete </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <i class="fa fa-plus-square-o fa-3x" aria-hidden="true" onclick="console.log('dawd')"></i>
+        <div class="border border-dark">
+          <div class="row">
+            <div class="col-6">
+              <h5 class="card-title">Billing Mode</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Default billing period were monthly. </h6>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+              </div>  
+            </div>
+            <div class="col-6">
+              <h5 class="card-title">Full Backup</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Daily backup on cloud backup solution (2 Copies) </h6>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row my-2">
+          <div class="col-6">
+            <h5 class="card-title mb-2 ">Security</h5>
+            <input type="range" class="form-range" min="0" max="10" step="1" onchange="updateTextInput1(this.value);">
+            <div class="row">
+              <p class="col-2">Value :</p>
+              <p class="col-1" id="textvalueRange"></p>
+            </div>
+          </div>
+          <div class="col-6">
+            <h5 class="card-title mb-2">Performance</h5>
+            <input type="range" class="form-range" min="0" max="10" step="1" onchange="updateTextInput2(this.value);">
+            <div class="row">
+              <p class="col-2">Value :</p>
+              <p class="col-1" id="textvalueRange2"></p>
+            </div>
+          </div>
+        </div>
+        <a class=" btn btn-success" href="#">Create VM</a>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="card" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">Summary</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Data Center</h6>
+        <p class="card-text">Thailand</p>
+        <hr>
+        <h5 class="card-title">Specification</h5>
+        <h6 class="card-subtitle mb-2 text-muted">CPU Intel SkyLake 6161 2.2GHz</h6>
+        <h6 class="card-subtitle mb-2 text-muted">4 CPU / 16 GB</h6>
+        <hr>
+        <h5 class="card-title">Operating System</h5>
+        <h6 class="card-subtitle mb-2 text-muted">CentOS ∙ CentOS 8.2 64bit</h6>
+        <hr>
+        <h5 class="card-title">Hard disk</h5>
+        <h6 class="card-subtitle mb-2 text-muted">70 GB ∙ High I/O</h6>
+        <hr>
+        <h5 class="card-title">Billing Mode</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Monthly</h6>
+        <hr>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block script %}
+<script>
+  function updateTextInput1(val) {
+    document.getElementById('textvalueRange').innerText = val;
+  }
+  function updateTextInput2(val) {
+    document.getElementById('textvalueRange2').innerText = val;
+  }
+</script>
+{% endblock %}

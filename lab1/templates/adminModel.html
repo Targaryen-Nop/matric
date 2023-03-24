@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Admin</title>
+{% endblock %}
+{% block contian %}
+<div class="row my-3">
+    <div class="col-12 p-3">
+        <div class="card p-5" style="width: 100%;">
+            <div class="card-body">
+                <h4 class="card-title">Admin</h5>
+            </div>
+<div class="row">
+    <div class="col-6">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3">Logger</span>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3">VMs</span>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+        </div>
+    </div>
+</div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Name</th>
+                        <th>Security</th>
+                        <th>Performance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>User1</td>
+                        <td>5</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>User2</td>
+                        <td>5</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>User3</td>
+                        <td>4</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>User4</td>
+                        <td>1</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>User5</td>
+                        <td>6</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>User6</td>
+                        <td>5</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class=" btn btn-success" href="#">Generate</a>
+        </div>  
+
+    </div>
+</div>
+{% endblock %}
