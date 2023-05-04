@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block title %}
-<title>Best model</title>
+<title>BestSolution</title>
 {% endblock %}
 {% block contian %}
 <div class="row my-3 ">
     <div class="col-12">
         <div class="card" style="width: 100%;">
             <div class="card-body">
-                <h4 class="card-title">Best model</h4>
+                <h4 class="card-title">Best Solution </h4>
                 <!-- <p class="card-text">{{metricmodel}}</p>
               <p class="card-text">{{header_row_N}}</p>
               {% for m in header_row_N %}
@@ -29,7 +29,7 @@
                 <div class="row">
                     <div class="col-3">
                         <h5>Logger : 10</h5>
-                        <h5>VM : 6</h5>
+                        <h5>VM : 8</h5>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -43,38 +43,50 @@
                                 <tr>
                                     <td>1</td>
                                     <td>User1</td>
-                                    <td>5</td>
-                                    <td>5</td>
+                                    <td>1</td>
+                                    <td>1</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>User2</td>
-                                    <td>5</td>
-                                    <td>5</td>
+                                    <td>1</td>
+                                    <td>1</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>User3</td>
-                                    <td>4</td>
-                                    <td>4</td>
+                                    <td>0</td>
+                                    <td>0</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>User4</td>
-                                    <td>1</td>
-                                    <td>1</td>
+                                    <td>5</td>
+                                    <td>4</td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>User5</td>
-                                    <td>6</td>
-                                    <td>6</td>
+                                    <td>5</td>
+                                    <td>3</td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>User6</td>
                                     <td>5</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>User7</td>
+                                    <td>4</td>
                                     <td>2</td>
+                                </tr>
+                                    <tr>
+                                    <td>8</td>
+                                    <td>User8</td>
+                                    <td>3</td>
+                                    <td>3</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -146,6 +158,8 @@
                     </div>
                     <div class="col">
                         <h5>Number of free Logger : {{obj_max}}</h5>
+                        <h5>Penalty Values : {{penalty}}</h5>
+                        <h5>Total : {{total}}</h5>
                     </div>
                 </div>
             </div>

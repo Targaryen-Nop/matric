@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block contian %}
+
+<form method="POST">
+      {% csrf_token %}
+<label for="username">Username:</label>
+  <input type="text" id="login" name="login" required>
+  <input type="text" id="password" name="password" required>
+  <input type="text" id="sec" name="sec" required>
+  <input type="text" id="per" name="per" required>
+  <input type="submit">
+</form>
+
+asdsasdada:{{ sec }}
+{% endblock %}

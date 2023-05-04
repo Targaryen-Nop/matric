@@ -22,7 +22,9 @@ urlpatterns = [
     path('', include("django.contrib.auth.urls")),
     path('', views.index, name='index'),
     path('test/', views.metric, name='metric'),
+    path('test2/', views.metric2, name='metric2'),
     path('adminModel/', views.adminModel, name='adminModel'),
-     path('home/', views.index, name='index'),
+    path('home/', views.index, name='index'),
     path('register/', views.register, name='register'),
+    path('input/', views.input, name='input'),
 ]

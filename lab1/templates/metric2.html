@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>PrepareSolution</title>
+{% endblock %}
+{% block contian %}
+<div class="row my-3 ">
+    <div class="col-12">
+        <div class="card" style="width: 100%;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                         <h4 class="card-title">Old Solution ==></h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>VM</th>
+                                    {% for row in header_row_N %}
+                                    <th>{{row}}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in metricmodel_old %}
+                                    {% for m in row %}
+                                
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    {% for m2 in m %}
+                                        <td style="{% if m2 > 0 %} color: red; font-weight: bold; {% endif %}">{{m2}}</td>
+                                    {% endfor %}
+                                </tr>
+                                        
+                                    {% endfor %}
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-6">
+                         <h4 class="card-title">New Solution ==></h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>VM</th>
+                                    {% for row in header_row_N %}
+                                    <th>{{row}}</th>
+                                    {% endfor %}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in metricmodel_new %}
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    {% for m in row %}
+                                        <td style="{% if m > 0 %} color: red; font-weight: bold; {% endif %}">{{m}}</td>
+                                    {% endfor %}
+                                </tr>
+
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 row">
+                        <div class="col-4 py-3">
+                            <h5>Number of VMs in Logger:</h5>
+                        </div>
+                        <div class="col">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        {% for row in header_row_N %}
+                                        <th>{{row}}</th>
+                                        {% endfor %}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for row in loggerSum %}
+                                    <tr>
+    
+                                        {% for m in row %}
+                                        <td style="{% if m > 0 %} color: red; font-weight: bold; {% endif %}">{{m}}</td>
+                                        {% endfor %}
+                                    </tr>
+    
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                       
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h5>Number of free Logger : {{obj_max}}</h5>
+                        <h5>Penalty Values : {{penalty}}</h5>
+                        <h5>Penalty Swap: {{penaltySwap}}</h5>
+                        <h5>Total of free Logger: {{total}}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    {% endblock %}
